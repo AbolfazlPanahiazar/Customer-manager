@@ -23,11 +23,20 @@ export class App {
     }
   }
 
-  deleteCustomer(customer) {
+  deleteCustomer(customer: Customer) {
     const index = this.customers.indexOf(customer);
     if (index > -1) {
+      this.removeCustomerFromLocalStorage(index);
       this.customers.splice(index, 1);
     }
+  }
+
+  removeCustomerFromLocalStorage(index: number) {
+    const customers = JSON.parse(localStorage.getItem("customers"));
+
+    customers.splice(index, 1);
+
+    localStorage.setItem("customers", JSON.stringify(customers));
   }
 
   storeCustomer(name: string, email: string, phone: string) {
