@@ -69,8 +69,13 @@ export class App {
         route: ["", "home"],
         name: "home",
         moduleId: PLATFORM.moduleName("home/index"),
-        navigator: true,
         title: "Home",
+      },
+      {
+        route: "users",
+        name: "users",
+        moduleId: PLATFORM.moduleName("users/index"),
+        title: "Users",
       },
     ]);
   }
