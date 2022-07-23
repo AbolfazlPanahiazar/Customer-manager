@@ -72,7 +72,7 @@ export class App {
         title: "Home",
       },
       {
-        route: "users",
+        route: "users/:slug",
         name: "users",
         moduleId: PLATFORM.moduleName("users/index"),
         title: "Users",
