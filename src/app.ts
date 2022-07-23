@@ -1,6 +1,8 @@
+import { PLATFORM } from "aurelia-pal";
 import { Customer } from "./customer/customer";
 
 export class App {
+  title: string;
   heading: string = "Customer Manager";
   customers: Customer[] = this.getCustomersFromaddCustomer();
   customerName: string = "";
@@ -58,5 +60,18 @@ export class App {
       customers = JSON.parse(localStorage.getItem("customers")) as Customer[];
     }
     return customers;
+  }
+
+  configureRouter(config, router) {
+    this.title = "Router Test";
+    config.map([
+      {
+        route: ["", "home"],
+        name: "home",
+        moduleId: PLATFORM.moduleName("home/index"),
+        navigator: true,
+        title: "Home",
+      },
+    ]);
   }
 }
