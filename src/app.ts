@@ -1,5 +1,6 @@
 import { PLATFORM } from "aurelia-pal";
 import { Customer } from "./customer/customer";
+import moment from "moment";
 
 export class App {
   title: string;
@@ -8,6 +9,7 @@ export class App {
   customerName: string = "";
   customerEmail: string = "";
   customerPhone: string = "";
+  message: string = moment().format("YYYY");
 
   addCustomer() {
     if (this.customerName && this.customerEmail && this.customerPhone) {

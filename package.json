@@ -11,7 +11,8 @@
     "aurelia-animator-css": "^1.0.4",
     "aurelia-bootstrapper": "^2.4.0",
     "bootstrap": "^5.2.0",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "moment": "^2.29.4"
   },
   "devDependencies": {
     "@types/jest": "^27.5.1",
