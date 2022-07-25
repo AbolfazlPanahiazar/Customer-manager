@@ -1764,6 +1764,14 @@ aurelia-hot-module-reload@^0.3.0:
   resolved "https://registry.yarnpkg.com/aurelia-hot-module-reload/-/aurelia-hot-module-reload-0.3.0.tgz#413f9c848d25260451d80f6c562fe4f33a433c60"
   integrity sha512-XBmELgRQ6qeVgjokRRhCuKjcaDjB2974g8PWKU1/3ZY/GoNl5SSeN6tqlsY1xQDcnWbyji/8UBSTtj4NSPKXPA==
 
+aurelia-http-client@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/aurelia-http-client/-/aurelia-http-client-1.3.1.tgz#38500194a15b0471509c0c983f7a300c9e856414"
+  integrity sha512-W/JqCUjsoz3omPl/bKzVB2/k3aXSyNXCa3nDjqege+JR30iiQvDGb3jfUiuPNJquCdO74p04U21BhqrQ7V2G1A==
+  dependencies:
+    aurelia-pal "^1.0.0"
+    aurelia-path "^1.1.1"
+
 aurelia-loader-default@^1.0.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/aurelia-loader-default/-/aurelia-loader-default-1.2.1.tgz#a6787a140095888a96fda4b1bd576c937b06bc4d"

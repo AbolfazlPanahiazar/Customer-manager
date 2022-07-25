@@ -1,7 +1,10 @@
 import { PLATFORM } from "aurelia-pal";
 import { Customer } from "./customer/customer";
 import moment from "moment";
+import { HttpClient } from "aurelia-http-client";
+import { inject } from "aurelia-framework";
 
+@inject(HttpClient)
 export class App {
   title: string;
   heading: string = "Customer Manager";
@@ -10,6 +13,15 @@ export class App {
   customerEmail: string = "";
   customerPhone: string = "";
   message: string = moment().format("YYYY");
+  httpClient: HttpClient;
+
+  constructor(httpClient: HttpClient) {
+    this.httpClient = httpClient;
+    this.httpClient
+      .get("/api/asdf")
+      .then((response) => {})
+      .catch((error) => {});
+  }
 
   addCustomer() {
     if (this.customerName && this.customerEmail && this.customerPhone) {
